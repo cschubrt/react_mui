@@ -1,20 +1,35 @@
-import * as React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import ProTip from './ProTip';
-import Copyright from './Copyright';
+import React from "react";
+import Navbar from "./components/Navbar";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Home from "./pages";
+import About from "./pages/about";
+import Blogs from "./pages/blogs";
+import SignUp from "./pages/signup";
+import Contact from "./pages/contact";
 
-export default function App() {
+function App() {
   return (
-    <Container maxWidth="sm">
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
-          Material UI Vite.js example
-        </Typography>
-        <ProTip />
-        <Copyright />
-      </Box>
-    </Container>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route
+          path="/contact"
+          element={<Contact />}
+        />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route
+          path="/sign-up"
+          element={<SignUp />}
+        />
+      </Routes>
+    </Router>
   );
 }
+
+export default App;
