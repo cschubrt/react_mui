@@ -1,6 +1,4 @@
 import React from "react";
-import Navbar from "./components/Navbar/Navigation";
-import Footer from "./components/Navbar/Footer";
 import {
   BrowserRouter as Router,
   Routes,
@@ -8,21 +6,25 @@ import {
 } from "react-router-dom";
 import Box from '@mui/material/Box';
 import Index from "./pages/";
-import Home from "./pages/home";
-import SignUp from "./pages/signup";
+import Home from "./pages/Home";
+//import SignUp from "./pages/signup";
 import Login from './pages/Login';
-import Contact from "./pages/contact";
+import Contact from "./pages/Contact";
+import Footer from "./components/Navbar/Footer";
+import Navbar from "./components/Navbar/Navigation";
 
+//basic layout and routes for pages
 function App() {
   return (
     <Router>
       <Navbar />
+      {/* {push footer to bottom of screen} */}
       <Box sx={{ display: 'flex', flex: 1, p: 2, flexDirection: 'column', alignItems: 'center' }}>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="/Login" element={<Login />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/Contact" element={<Contact />} />
         </Routes>
       </Box>
       <Footer />

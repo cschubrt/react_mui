@@ -1,13 +1,46 @@
-import React from "react";
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import SignInCard from '../components/SignInCard';
+import Content from '../components/Content';
 
-const Home = () => {
+export default function Home() {
   return (
-    <div>
-      <h1>
-        Home Coming Soon
-      </h1>
-    </div>
+    <Box>
+      <Stack
+        direction="column"
+        component="main"
+        sx={
+          {
+            justifyContent: 'center',
+            height: 'calc((1 - var(--template-frame-height, 0)) * 100%)',
+            marginTop: 'max(20px - var(--template-frame-height, 0px), 0px)',
+            minHeight: '100%',
+          }}
+      >
+        <Stack
+          direction={{ xs: 'column-reverse', md: 'row' }}
+          sx={{
+            justifyContent: 'center',
+            gap: { xs: 6, sm: 12 },
+            p: 2,
+            mx: 'auto',
+          }}
+        >
+          <Stack
+            direction={{ xs: 'column-reverse', md: 'row' }}
+            sx={{
+              justifyContent: 'center',
+              gap: { xs: 6, sm: 12 },
+              p: { xs: 2, sm: 4 },
+              m: 'auto',
+            }}
+          >
+            <Content />
+            <SignInCard />
+          </Stack>
+        </Stack>
+      </Stack>
+    </Box>
   );
-};
-
-export default Home;
+}

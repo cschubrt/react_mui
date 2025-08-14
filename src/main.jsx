@@ -4,11 +4,12 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import App from './App';
-import theme from './shared-theme/theme';
+import theme from './theme';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
+//StrictMode for dev
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>

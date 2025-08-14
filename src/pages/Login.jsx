@@ -14,7 +14,7 @@ export default function Login() {
           {
             justifyContent: 'center',
             height: 'calc((1 - var(--template-frame-height, 0)) * 100%)',
-            marginTop: 'max(40px - var(--template-frame-height, 0px), 0px)',
+            marginTop: 'max(20px - var(--template-frame-height, 0px), 0px)',
             minHeight: '100%',
           }}
       >

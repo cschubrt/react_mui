@@ -22,9 +22,9 @@ function Navbar() {
   };
 
   const navLinks = [
-    { route: '/home', name: 'Home' },
+    { route: '/Home', name: 'Home' },
     { route: '/Login', name: 'Login' },
-    { route: '/contact', name: 'Contact' }
+    { route: '/Contact', name: 'Contact' }
   ];
 
   return (
