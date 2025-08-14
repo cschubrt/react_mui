@@ -39,7 +39,7 @@ export default function Content() {
     <Stack
       sx={{ flexDirection: 'column', alignSelf: 'center', gap: 4, maxWidth: 450 }}
     >
-      {items.map((item, index) => (
+      {/* {items.map((item, index) => (
         <Stack key={index} direction="row" sx={{ gap: 2 }}>
           {item.icon}
           <div>
@@ -51,7 +51,7 @@ export default function Content() {
             </Typography>
           </div>
         </Stack>
-      ))}
+      ))} */}
     </Stack>
   );
 }

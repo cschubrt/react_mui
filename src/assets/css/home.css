@@ -13,11 +13,12 @@
 
 /* Top left text */
 .top-left {
+  margin: 0;
+  padding: 0;
   position: absolute;
   top: 8px;
   left: 16px;
   font-size: 35px;
-  color: rgba(92, 113, 94, .6);
 }
 
 /* Top right text */
@@ -34,7 +35,7 @@
   right: 0;
   width: 30%;
   border-radius: 7px;
-  animation: fadeIn 1.8s ease-in-out;
+  animation: fadeIn 1.3s ease-in-out;
 }
 
 /* Centered text */
@@ -56,7 +57,7 @@
 }
 
 img.faded {
-  animation: fadeIn 1.5s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .popup {

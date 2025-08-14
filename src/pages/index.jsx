@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';
+import { motion } from "motion/react"
 import pic from '../assets/p2.jpg';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
@@ -8,8 +8,8 @@ import ListItemButton from '@mui/material/ListItemButton';
 import Typography from '@mui/material/Typography';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
-import Fade from '@mui/material/Fade';
 import { NavLink } from 'react-router-dom';
+import Container from '@mui/material/Container';
 import '../assets/css/home.css'
 
 export default function Home() {
@@ -62,11 +62,13 @@ export default function Home() {
               </nav>
             </Box>
           </Box>
-          <Fade in={true} easing={{ enter: 'cubic-bezier(0.0, 0, 0.2, 0)' }}>
-          <Box className="top-left">
+          <motion.p
+            initial={{ color: '#141414ff', opacity: 0, scale: 0.5 }}
+            animate={{ color: '#5c715eff', opacity: .8, scale: 1,transition: { duration: 1 } }}
+            className="top-left"
+          >
             This is React
-          </Box>
-          </Fade>
+          </motion.p>
         </Box>
       </Box>
     </Container>

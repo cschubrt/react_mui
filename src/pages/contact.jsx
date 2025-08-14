@@ -1,13 +1,15 @@
-import React from "react";
+import React from 'react';
+import { motion } from "motion/react"
 
-const Contact = () => {
+export default function Signup() {
   return (
-    <div>
-      <h1>
-        Contact Comming Soon
-      </h1>
-    </div>
+    <>
+      <motion.p
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+      >
+        Text animated using opacity and scale
+      </motion.p>
+    </>
   );
-};
-
-export default Contact;
+}
