@@ -4,7 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import App from './App';
-import theme from './theme';
+import theme from './shared-theme/theme';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -17,5 +17,5 @@ root.render(
         <App />
       </Box>
     </ThemeProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );

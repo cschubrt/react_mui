@@ -1,14 +1,16 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./components/Navbar/Navigation";
+import Footer from "./components/Navbar/Footer";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
 import Box from '@mui/material/Box';
-import Home from "./pages";
+import Index from "./pages/";
+import Home from "./pages/home";
 import SignUp from "./pages/signup";
+import Login from './pages/Login';
 import Contact from "./pages/contact";
 
 function App() {
@@ -17,9 +19,10 @@ function App() {
       <Navbar />
       <Box sx={{ display: 'flex', flex: 1, p: 2, flexDirection: 'column', alignItems: 'center' }}>
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route path="/" element={<Index />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/Login" element={<Login />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/sign-up" element={<SignUp />} />
         </Routes>
       </Box>
       <Footer />

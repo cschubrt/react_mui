@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import Button from '@mui/material/Button'; // For desktop links
+import Button from '@mui/material/Button';
 import { NavLink } from 'react-router-dom';
 
 function Navbar() {
@@ -22,8 +22,8 @@ function Navbar() {
   };
 
   const navLinks = [
-    { route: '/', name: 'Home' },
-    { route: '/sign-up', name: 'Sign-Up' },
+    { route: '/home', name: 'Home' },
+    { route: '/Login', name: 'Login' },
     { route: '/contact', name: 'Contact' }
   ];
 
@@ -37,10 +37,10 @@ function Navbar() {
           sx={{ flexGrow: 1, display: { md: 'flex' } }}
         >
           <Box
-          component="img"
-          src='../src/assets/logo2.png'
-          sx={{ height: 50, width: 70 }}
-        />
+            component="img"
+            src='../src/assets/logo2.png'
+            sx={{ height: 50, width: 70 }}
+          />
         </Typography>
 
         {/* Hamburger menu for small screens */}

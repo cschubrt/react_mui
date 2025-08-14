@@ -16,7 +16,7 @@ import '../assets/css/home.css'
 export default function Signup() {
   return (
     <>
-    <h2>Comming Soon</h2>
+    <h1>Comming Soon</h1>
     </>
   );
 }
