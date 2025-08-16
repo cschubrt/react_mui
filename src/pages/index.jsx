@@ -36,7 +36,7 @@ export default function Home() {
               <nav aria-label="Navigation area">
                 <List>
                   <ListItem disablePadding>
-                    <ListItemButton component={NavLink} to="/home">
+                    <ListItemButton component={NavLink} to="/Home">
                       <ListItemText primary={<Typography textAlign="right">
                         Home
                       </Typography>} />
@@ -52,7 +52,7 @@ export default function Home() {
                   </ListItem>
                   <Divider />
                   <ListItem disablePadding>
-                    <ListItemButton component={NavLink} to="/contact">
+                    <ListItemButton component={NavLink} to="/Contact">
                       <ListItemText primary={<Typography textAlign="right">
                         Contact
                       </Typography>} />
@@ -64,7 +64,7 @@ export default function Home() {
           </Box>
           <motion.p
             initial={{ color: '#141414ff', opacity: 0, scale: 0.5 }}
-            animate={{ color: '#5c715eff', opacity: .8, scale: 1,transition: { duration: 1 } }}
+            animate={{ color: '#5c715eff', opacity: .8, scale: 1, transition: { duration: 1 } }}
             className="top-left"
           >
             This is React

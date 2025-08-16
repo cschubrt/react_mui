@@ -8,7 +8,7 @@ export default function Signup() {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
       >
-        Text animated using opacity and scale
+        Contact
       </motion.p>
     </>
   );

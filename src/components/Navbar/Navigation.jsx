@@ -86,7 +86,7 @@ function Navbar() {
 
         </Box>
 
-        {/* Desktop navigation links */}
+        {/* large screens */}
         <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
           {navLinks.map((link) => (
             <>
