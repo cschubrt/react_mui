@@ -16,19 +16,19 @@ import { GoogleIcon, FacebookIcon } from './CustomIcons';
 
 const Card = styled(MuiCard)(({ theme }) => ({
   display: 'flex',
+  background: 'transparent',
+  boxShadow: 'none',
   flexDirection: 'column',
   alignSelf: 'center',
   width: '100%',
   padding: theme.spacing(4),
   gap: theme.spacing(2),
-  boxShadow:
-    'hsla(220, 30%, 5%, 0.05) 0px 5px 15px 0px, hsla(220, 25%, 10%, 0.05) 0px 15px 35px -5px',
   [theme.breakpoints.up('sm')]: {
     width: '550px',
   },
 }));
 
-export default function SignInCard() {
+export default function SignIn() {
   const [emailError, setEmailError] = React.useState(false);
   const [emailErrorMessage, setEmailErrorMessage] = React.useState('');
   const [passwordError, setPasswordError] = React.useState(false);
@@ -44,8 +44,8 @@ export default function SignInCard() {
   };
 
   const handleSubmit = (event) => {
+    event.preventDefault();
     if (emailError || passwordError) {
-      event.preventDefault();
       return;
     }
     const data = new FormData(event.currentTarget);
@@ -83,7 +83,7 @@ export default function SignInCard() {
   };
 
   return (
-    <Card variant="outlined">
+    <Card>
       <Typography
         component="h1"
         variant="h4"
@@ -110,23 +110,12 @@ export default function SignInCard() {
             autoFocus
             required
             fullWidth
-            variant="outlined"
+            variant="standard"
             color={emailError ? 'error' : 'primary'}
           />
         </FormControl>
         <FormControl>
-          <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-            <FormLabel htmlFor="password">Password</FormLabel>
-            <Link
-              component="button"
-              type="button"
-              onClick={handleClickOpen}
-              variant="body2"
-              sx={{ alignSelf: 'baseline' }}
-            >
-              Forgot your password?
-            </Link>
-          </Box>
+          <FormLabel htmlFor="password">Password</FormLabel>
           <TextField
             error={passwordError}
             helperText={passwordErrorMessage}
@@ -135,17 +124,26 @@ export default function SignInCard() {
             type="password"
             id="password"
             autoComplete="current-password"
-            autoFocus
             required
             fullWidth
-            variant="outlined"
+            variant="standard"
             color={passwordError ? 'error' : 'primary'}
           />
         </FormControl>
-        <FormControlLabel
-          control={<Checkbox value="remember" color="primary" />}
-          label="Remember me"
-        />
+        <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+          <FormControlLabel
+            control={<Checkbox value="remember" color="primary" />}
+            label="Remember me"
+          />
+          <Link
+            component="button"
+            type="button"
+            onClick={handleClickOpen}
+            variant="body2"
+          >
+            Forgot your password?
+          </Link>
+        </Box>
         <ForgotPassword open={open} handleClose={handleClose} />
         <Button type="submit" fullWidth variant="contained" onClick={validateInputs}>
           Sign in

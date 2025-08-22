@@ -1,6 +1,5 @@
 import { Typography, Box } from '@mui/material';
 import Copyright from '../../components/Copyright'
-import Crumbs from '../../components/Navbar/Crumbs';
 
 function Footer() {
   return (

@@ -9,6 +9,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import { NavLink } from 'react-router-dom';
+import logo from '../../assets/logo2.png';
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -22,9 +23,9 @@ function Navbar() {
   };
 
   const navLinks = [
-    { route: '/Home', name: 'Home' },
-    { route: '/Login', name: 'Login' },
-    { route: '/Contact', name: 'Contact' }
+    { route: '/home', name: 'Home' },
+    { route: '/login', name: 'Login' },
+    { route: '/contact', name: 'Contact' }
   ];
 
   return (
@@ -38,7 +39,7 @@ function Navbar() {
         >
           <Box
             component="img"
-            src='../src/assets/logo2.png'
+            src={logo}
             sx={{ height: 50, width: 70 }}
           />
         </Typography>
@@ -47,7 +48,7 @@ function Navbar() {
         <Box sx={{ flexGrow: 1, justifyContent: 'end', display: { xs: 'flex', md: 'none' } }}>
           <IconButton
             size="large"
-            aria-label="account of current user"
+            aria-label="open navigation menu"
             aria-controls="menu-appbar"
             aria-haspopup="true"
             onClick={handleOpenNavMenu}

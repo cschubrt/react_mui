@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { motion } from "motion/react"
 import pic from '../assets/p2.jpg';
 import Box from '@mui/material/Box';
@@ -12,31 +11,30 @@ import { NavLink } from 'react-router-dom';
 import Container from '@mui/material/Container';
 import '../assets/css/home.css'
 
-export default function Home() {
+export default function Index() {
   return (
-    <Container className="popup" maxWidth="100%">
-      <Box className="popup-inner">
-        <Box className="imgContainer" maxWidth="100%">
+    <Container id="popup" maxWidth="100%">
+      <Box id="popupInner">
+        <Box id="imgContainer" maxWidth="100%">
           <Box
             component="img"
-            className="faded"
+            id="faded"
             sx={{
               width: '100%',
-              maxWidth: '100%',
               borderRadius: '5px',
               maxHeight: '100%',
               height: '100%',
               minHeight: '159px',
             }}
-            alt="Computing Image"
+            alt="Landing Page Computing Image"
             src={pic}
           />
-          <Box className="bottom-right">
+          <Box id="bottomRight">
             <Box sx={{ color: '#f0f5f1', width: '100%', borderRadius: '5px', backgroundColor: 'rgba(92, 113, 94, .3)' }}>
               <nav aria-label="Navigation area">
                 <List>
                   <ListItem disablePadding>
-                    <ListItemButton component={NavLink} to="/Home">
+                    <ListItemButton component={NavLink} to="/home">
                       <ListItemText primary={<Typography textAlign="right">
                         Home
                       </Typography>} />
@@ -44,7 +42,7 @@ export default function Home() {
                   </ListItem>
                   <Divider />
                   <ListItem disablePadding>
-                    <ListItemButton component={NavLink} to="/Login">
+                    <ListItemButton component={NavLink} to="/login">
                       <ListItemText primary={<Typography textAlign="right">
                         Login
                       </Typography>} />
@@ -52,7 +50,7 @@ export default function Home() {
                   </ListItem>
                   <Divider />
                   <ListItem disablePadding>
-                    <ListItemButton component={NavLink} to="/Contact">
+                    <ListItemButton component={NavLink} to="/contact">
                       <ListItemText primary={<Typography textAlign="right">
                         Contact
                       </Typography>} />
@@ -65,7 +63,7 @@ export default function Home() {
           <motion.p
             initial={{ color: '#141414ff', opacity: 0, scale: 0.5 }}
             animate={{ color: '#5c715eff', opacity: .8, scale: 1, transition: { duration: 1 } }}
-            className="top-left"
+            id="topLeft"
           >
             This is React
           </motion.p>

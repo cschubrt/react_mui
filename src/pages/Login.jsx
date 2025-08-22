@@ -1,7 +1,7 @@
-import * as React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import SignInCard from '../components/SignInCard';
+import SignIn from '../components/SignIn';
+import Divider from '@mui/material/Divider';
 import Content from '../components/Content';
 
 export default function Login() {
@@ -22,7 +22,7 @@ export default function Login() {
           direction={{ xs: 'column-reverse', md: 'row' }}
           sx={{
             justifyContent: 'center',
-            gap: { xs: 6, sm: 12 },
+            gap: 6,
             p: 2,
             mx: 'auto',
           }}
@@ -31,13 +31,14 @@ export default function Login() {
             direction={{ xs: 'column-reverse', md: 'row' }}
             sx={{
               justifyContent: 'center',
-              gap: { xs: 6, sm: 12 },
+              gap: 6,
               p: { xs: 2, sm: 4 },
               m: 'auto',
             }}
           >
             <Content />
-            <SignInCard />
+            <Divider orientation="vertical" flexItem />
+            <SignIn />
           </Stack>
         </Stack>
       </Stack>
