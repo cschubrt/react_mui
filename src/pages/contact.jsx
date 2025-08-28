@@ -7,7 +7,7 @@ export default function Signup() {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
       >
-        Contact
+        Contact Comming Soon!
       </motion.p>
     </>
   );

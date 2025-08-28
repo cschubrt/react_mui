@@ -1,6 +1,4 @@
-# =========================================
 # Stage 1: Build the React.js Application
-# =========================================
 ARG NODE_VERSION=22.14.0-alpine
 ARG NGINX_VERSION=alpine3.21
 
@@ -22,10 +20,8 @@ COPY . .
 # Build the React.js application (outputs to /app/dist)
 RUN npm run build
 
-# =========================================
-# Stage 2: Prepare Nginx to Serve Static Files
-# =========================================
 
+# Stage 2: Prepare Nginx to Serve Static Files
 FROM nginxinc/nginx-unprivileged:${NGINX_VERSION} AS runner
 
 # Use a built-in non-root user for security best practices

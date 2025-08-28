@@ -46,7 +46,7 @@ export default function Home() {
         </Card>
         <Card sx={{ height: '100%' }} >
           <Typography variant='h6'>Material UI</Typography>
-          MUI offers a comprehensive suite of free UI tools to help you ship new features faster. Start with Material UI, our fully-loaded component library, or bring your own design system to our production-ready components.
+          MUI offers a comprehensive suite of free UI tools to help devs ship new features faster. Start with Material UI, fully-loaded component library, or bring your own design system to production-ready components.
         </Card>
       </Box>
 
