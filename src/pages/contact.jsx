@@ -1,6 +1,6 @@
 import { motion } from "motion/react"
 
-export default function Signup() {
+export default function Contact() {
   return (
     <>
       <motion.p
